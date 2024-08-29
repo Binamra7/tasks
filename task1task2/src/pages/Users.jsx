@@ -18,7 +18,6 @@ export const Users = () => {
       _setUsers(userName);
     } catch (error) {
       _setError('Error fetching users');
-      console.error(error);
     } finally {
       _setLoading(false);
     }

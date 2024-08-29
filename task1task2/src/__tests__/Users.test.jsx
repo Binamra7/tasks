@@ -54,7 +54,7 @@ describe('Users Component', () => {
 
     await waitFor(() => {
       expect(screen.getByText('Leanne')).toBeInTheDocument();
-      expect(screen.getByRole('button')).toHaveTextContent('Fetch Users'); // Or check for Spinner if that's what you're showing
+      expect(screen.getByRole('button')).toHaveTextContent('Fetch Users');
     });
   });
 
@@ -64,7 +64,6 @@ describe('Users Component', () => {
     fireEvent.click(screen.getByText('Fetch Users'));
 
     expect(screen.getByTestId('spinner')).toBeInTheDocument();
-    // expect(screen.getByRole('button')).toHaveTextContent('Fetching...'); // Or check for Spinner if that's what you're showing
   });
 
   test('displays error message when fetch fails', async () => {
