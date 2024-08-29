@@ -12,7 +12,6 @@ export const Users = () => {
       const userData = await fetch(
         'https://jsonplaceholder.typicode.com/users'
       );
-      await new Promise((resolve) => setTimeout(resolve, 500));
       const data = await userData.json();
       const userName = data.map((user) => user.name);
       _setUsers(userName);
